@@ -24,7 +24,6 @@ def caesar_cipher (str, shift)
   end
 
   codes_shift.join()
-  
 end
 
 p caesar_cipher("What a good time!", 6)
