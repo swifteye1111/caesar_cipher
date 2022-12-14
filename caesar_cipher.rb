@@ -6,6 +6,7 @@
 
 class CaesarCipher
   def encrypt (str, shift)
+    shift = shift % 26
     codes_shift = str.chars.map do |c|
       c = c.ord
       if c.between?(65, 90)

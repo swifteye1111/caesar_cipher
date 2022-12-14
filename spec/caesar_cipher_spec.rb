@@ -31,5 +31,15 @@ describe CaesarCipher do
       cipher = CaesarCipher.new
       expect(cipher.encrypt("What a good time!", 6)).to eql("Cngz g muuj zosk!")
     end
+
+    it "encrypts using a large positive shift" do
+      cipher = CaesarCipher.new
+      expect(cipher.encrypt("What a good time!", 66)).to eql("Kvoh o uccr hwas!")
+    end
+
+    it "encrypts using a large negative shift" do
+      cipher = CaesarCipher.new
+      expect(cipher.encrypt("What a good time!", -66)).to eql("Itmf m saap fuyq!")
+    end
   end
 end
